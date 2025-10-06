@@ -1578,6 +1578,79 @@ img {
 }
 
 /* ================================
+   RESUME SECTION STYLES
+   ================================ */
+
+.resume-highlight {
+  position: relative;
+  background: rgba(31, 41, 55, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-left: 3px solid var(--primary-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.resume-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(147, 51, 234, 0.05), rgba(99, 102, 241, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.resume-highlight:hover {
+  transform: translateY(-5px);
+  border-left-color: #9333ea;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.resume-highlight:hover::before {
+  opacity: 1;
+}
+
+.text-gradient-light {
+  background: linear-gradient(135deg, #ffffff, #a5b4fc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.resume-list {
+  margin-left: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.resume-bullet {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Responsive styles for Resume Highlight */
+@media (max-width: 768px) {
+  .resume-highlight {
+    padding: 1rem;
+  }
+  
+  .resume-list li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ================================
    MOBILE RESPONSIVE FIXES
    ================================ */
 
