@@ -153,7 +153,29 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.image-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.about-image-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-image-container img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .profile-image {
@@ -848,6 +870,10 @@ img {
   .circle-2 {
     width: 260px;
     height: 260px;
+  }
+  
+  .about-image-container {
+    max-width: 280px;
   }
 }
 
