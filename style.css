@@ -863,6 +863,11 @@ img {
   .profile-image {
     max-width: 280px;
     max-height: 280px;
+    width: 280px !important;
+    height: 280px !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 !important;
+    object-fit: cover !important;
   }
   
   .circle-1 {
@@ -877,6 +882,22 @@ img {
   
   .about-image-container {
     max-width: 280px;
+  }
+  
+  /* Contact form mobile fixes */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 1rem !important;
+  }
+  
+  .contact-form label {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Form container spacing */
+  .contact-form > div {
+    margin-bottom: 1.5rem !important;
   }
 }
 
@@ -1867,6 +1888,36 @@ img, video, iframe {
   
   .py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
   .py-10 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  
+  /* Contact form mobile improvements */
+  .contact-form {
+    gap: 1rem !important;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .contact-form textarea {
+    min-height: 120px !important;
+    resize: vertical !important;
+  }
+  
+  /* Grid layout fixes for contact section */
+  .grid.grid-cols-1.md\\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  /* Ensure contact cards don't overflow */
+  .contact-info-container,
+  .bg-gray-900.rounded-lg {
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+  }
 }
 
 /* Extra small devices */
@@ -1894,6 +1945,57 @@ img, video, iframe {
   
   .service-card {
     padding: 1.25rem;
+  }
+  
+  /* Contact form mobile fixes */
+  .contact-info-container,
+  .bg-gray-900.rounded-lg.p-8 {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 0.875rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .contact-form label {
+    font-size: 0.875rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .contact-form button {
+    padding: 0.875rem !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Fix contact info layout */
+  .contact-info {
+    margin-bottom: 1rem !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  .contact-info h4 {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Hero section mobile adjustments */
+  .hero-image-container {
+    margin: 2rem auto !important;
+  }
+  
+  /* Profile image forced circular */
+  .profile-image {
+    width: 250px !important;
+    height: 250px !important;
+    max-width: 250px !important;
+    max-height: 250px !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 !important;
+    object-fit: cover !important;
+    border: 4px solid var(--primary-color) !important;
   }
 }
 
@@ -1932,22 +2034,68 @@ img, video, iframe {
 
 @media (max-width: 768px) {
   .grid-cols-1,
-  .md-grid-cols-2,
-  .lg-grid-cols-3 {
+  .md\:grid-cols-2,
+  .lg\:grid-cols-3 {
     grid-template-columns: 1fr !important;
   }
   
-  .md-flex-row {
+  .md\:flex-row {
     flex-direction: column !important;
   }
   
-  .md-w-1-2 {
+  .md\:w-1\/2 {
     width: 100% !important;
   }
   
-  .md-pr-10,
-  .md-pl-10 {
+  .md\:pr-10,
+  .md\:pl-10 {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+  
+  /* Hero section mobile layout */
+  #home .flex.flex-col.md\:flex-row {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  #home .md\:w-1\/2 {
+    width: 100% !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* About section mobile layout */
+  #about .flex.flex-col.md\:flex-row {
+    flex-direction: column !important;
+  }
+  
+  #about .md\:w-1\/2 {
+    width: 100% !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Skills section mobile layout */
+  .skill-category {
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Projects section mobile layout */
+  .project-card {
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Services section mobile layout */
+  .service-card {
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Contact section mobile layout */
+  #contact .grid.grid-cols-1.md\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  #contact .md\:grid-cols-2 > div {
+    margin-bottom: 2rem !important;
   }
 }
