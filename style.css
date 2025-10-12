@@ -179,17 +179,19 @@ img {
 }
 
 .profile-image {
-  margin-top: 30px;
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
-  max-height: 300px;
+  margin: 0;
+  width: clamp(240px, 30vw, 360px);
+  height: clamp(240px, 30vw, 360px);
+  max-width: 100%;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid var(--primary-color);
-  z-index: 2;
-  /* aspect-ratio: 1; */ /* Removed for better browser compatibility */
-  /* animation: float 6s ease-in-out infinite; */
+  z-index: 1;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .circle-bg {
@@ -200,18 +202,18 @@ img {
 
 
 .circle-1 {
-  width: 650px;
+  width: clamp(400px, 50vw, 650px);
   margin-top: 30px;
-  height: 650px;
+  height: clamp(400px, 50vw, 650px);
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   opacity: 0.3;
   /* animation: pulse 4s ease-in-out infinite; */
 }
 
 .circle-2 {
-   margin-top: 30px;
-  width: 680px;
-  height: 680px;
+  margin-top: 30px;
+  width: clamp(430px, 52vw, 680px);
+  height: clamp(430px, 52vw, 680px);
   border: 2px dashed var(--primary-color);
   opacity: 0.6;
   animation: spin 20s linear infinite;
@@ -219,6 +221,7 @@ img {
 
 .text-gradient {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -230,6 +233,7 @@ img {
   text-align: center;
   margin-bottom: 0.5rem;
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -964,22 +968,26 @@ img {
   }
   
   .profile-image {
-    width: 250px !important;
-    height: 250px !important;
-    max-width: 250px !important;
-    max-height: 250px !important;
+    width: clamp(200px, 45vw, 320px) !important;
+    height: clamp(200px, 45vw, 320px) !important;
+    max-width: 100% !important;
     border-radius: 50% !important;
     object-fit: cover !important;
+    margin: 0 !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
   }
   
   .circle-1 {
-    width: 320px;
-    height: 320px;
+    width: clamp(300px, 70vw, 400px);
+    height: clamp(300px, 70vw, 400px);
   }
   
   .circle-2 {
-    width: 340px;
-    height: 340px;
+    width: clamp(320px, 75vw, 430px);
+    height: clamp(320px, 75vw, 430px);
   }
   
   .about-image-container {
@@ -1013,13 +1021,13 @@ img {
   }
   
   .circle-1 {
-    width: 480px;
-    height: 480px;
+    width: clamp(320px, 35vw, 480px);
+    height: clamp(320px, 35vw, 480px);
   }
   
   .circle-2 {
-    width: 500px;
-    height: 500px;
+    width: clamp(340px, 37vw, 500px);
+    height: clamp(340px, 37vw, 500px);
   }
   
   .about-image-container {
