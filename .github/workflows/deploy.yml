@@ -1,0 +1,57 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install dependencies (if any)
+      run: |
+        # Check if package.json exists and install dependencies
+        if [ -f package.json ]; then
+          npm ci
+        fi
+
+    - name: Build (if needed)
+      run: |
+        # Add build steps if you have a build process
+        # For example: npm run build
+        echo "No build step required for static site"
+
+    - name: Validate HTML
+      run: |
+        # Install HTML validator
+        npm install -g html-validate
+
+        # Validate HTML files
+        find . -name "*.html" -not -path "./node_modules/*" -exec html-validate {} \;
+
+    - name: Check for broken links (optional)
+      run: |
+        # Install link checker
+        npm install -g linkinator
+
+        # Check links (adjust URL as needed)
+        npx linkinator https://beshwanthsai.github.io/PORTFOLIO/ --recurse --silent --timeout=5000 || true
+
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        cname: beshwanthsai.github.io  # Remove this line if not using custom domain

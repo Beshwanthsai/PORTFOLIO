@@ -1,0 +1,23 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "no-trailing-whitespace": "error",
+    "no-multiple-empty-lines": "error",
+    "attr-quotes": "error",
+    "doctype-html5": "error",
+    "element-required-attributes": "off",
+    "input-requires-label": "off",
+    "no-inline-styles": "off",
+    "no-raw-characters": "off",
+    "prefer-native-element": "off",
+    "require-sri": "off",
+    "script-type": "off",
+    "svg-focusable": "off",
+    "wcag/h30": "off",
+    "wcag/h32": "off",
+    "wcag/h36": "off",
+    "wcag/h37": "off",
+    "wcag/h63": "off",
+    "wcag/h67": "off"
+  }
+}

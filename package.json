@@ -1,0 +1,34 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Beshwanth Sai Katari's Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'No build step required'",
+    "test": "echo 'No tests specified'",
+    "validate": "npx html-validate *.html",
+    "lint": "echo 'No linting configured'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beshwanthsai/PORTFOLIO.git"
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "frontend",
+    "responsive"
+  ],
+  "author": "Beshwanth Sai Katari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Beshwanthsai/PORTFOLIO/issues"
+  },
+  "homepage": "https://beshwanthsai.github.io/PORTFOLIO/",
+  "devDependencies": {
+    "html-validate": "^8.0.0",
+    "linkinator": "^6.0.0",
+    "serve": "^14.0.0"
+  }
+}
