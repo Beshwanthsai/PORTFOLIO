@@ -49,18 +49,12 @@ jobs:
 
     - name: Validate HTML
       run: |
-        # Install HTML validator
-        npm install -g html-validate
-
-        # Validate HTML files
-        find . -name "*.html" -not -path "./node_modules/*" -exec html-validate {} \;
+        # Validate HTML files using locally installed html-validate
+        find . -name "*.html" -not -path "./node_modules/*" -exec npx html-validate {} \;
 
     - name: Check for broken links (optional)
       run: |
-        # Install link checker
-        npm install -g linkinator
-
-        # Check links (adjust URL as needed)
+        # Check links using locally installed linkinator
         npx linkinator https://beshwanthsai.github.io/PORTFOLIO/ --recurse --silent --timeout=5000 || true
 
     - name: Setup Pages
