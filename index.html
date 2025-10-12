@@ -13,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -34,7 +34,7 @@
             <div class="flex justify-between items-center">
                 <a href="#" class="logo-container group">
                     <span class="logo-text">
-                        <span class="logo-first">Beshwanth Sai</span> 
+                        <span class="logo-first">Beshwanth Sai</span>
                         <span class="logo-last">Katari</span>
                     </span>
                 </a>
@@ -70,12 +70,12 @@
                     </a>
                 </div>
 
-                <button class="md:hidden mobile-menu-button-glass">
-                    <div class="hamburger-icon">
+                <button type="button" class="md:hidden mobile-menu-button-glass" aria-label="Toggle mobile menu">
+                    <span class="hamburger-icon">
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
-                    </div>
+                    </span>
                 </button>
             </div>
 
@@ -198,7 +198,7 @@
                     <div class="resume-highlight mb-6 p-4 bg-gray-700 bg-opacity-40 rounded-lg border-l-2 border-purple-500">
                         <h4 class="text-xl font-semibold mb-3 text-gradient-light">My Resume at a Glance</h4>
                         <p class="text-gray-300 mb-3">
-                            My resume details my academic journey at KL University, technical skills in web development and AI, 
+                            My resume details my academic journey at KL University, technical skills in web development and AI,
                             and professional experiences including:
                         </p>
                         <ul class="resume-list">
@@ -245,28 +245,28 @@
                                 <span>HTML</span>
                                 <span>90%</span>
                             </div>
-                            <div class="skill-bar"><span class="skill-percentage" style="width: 90%"></span></div>
+                            <div class="skill-bar"><span class="skill-percentage skill-html"></span></div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between mb-1">
                                 <span>CSS</span>
                                 <span>85%</span>
                             </div>
-                            <div class="skill-bar"><span class="skill-percentage" style="width: 85%"></span></div>
+                            <div class="skill-bar"><span class="skill-percentage skill-css"></span></div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between mb-1">
                                 <span>JavaScript</span>
                                 <span>80%</span>
                             </div>
-                            <div class="skill-bar"><span class="skill-percentage" style="width: 80%"></span></div>
+                            <div class="skill-bar"><span class="skill-percentage skill-js"></span></div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between mb-1">
                                 <span>React</span>
                                 <span>75%</span>
                             </div>
-                            <div class="skill-bar"><span class="skill-percentage" style="width: 75%"></span></div>
+                            <div class="skill-bar"><span class="skill-percentage skill-react"></span></div>
                         </div>
                     </div>
                 </div>
@@ -279,28 +279,28 @@
                                 <span>Node.js</span>
                                 <span>50%</span>
                             </div>
-                            <div class="skill-bar"><span class="skill-percentage" style="width: 50%"></span></div>
+                            <div class="skill-bar"><span class="skill-percentage skill-nodejs"></span></div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between mb-1">
                                 <span>Django</span>
                                 <span>75%</span>
                             </div>
-                            <div class="skill-bar"><span class="skill-percentage" style="width: 75%"></span></div>
+                            <div class="skill-bar"><span class="skill-percentage skill-django"></span></div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between mb-1">
                                 <span>Python</span>
                                 <span>70%</span>
                             </div>
-                            <div class="skill-bar"><span class="skill-percentage" style="width: 70%"></span></div>
+                            <div class="skill-bar"><span class="skill-percentage skill-python"></span></div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between mb-1">
                                 <span>C Language</span>
                                 <span>65%</span>
                             </div>
-                            <div class="skill-bar"><span class="skill-percentage" style="width: 65%"></span></div>
+                            <div class="skill-bar"><span class="skill-percentage skill-c"></span></div>
                         </div>
                     </div>
                 </div>
@@ -367,10 +367,10 @@
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Recent works</p>
 
             <div class="project-filter flex flex-wrap justify-center space-x-2 mt-8 mb-10">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="app">App</button>
-                <button class="filter-btn" data-filter="ai">AI</button>
+                <button type="button" class="filter-btn active" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="web">Web</button>
+                <button type="button" class="filter-btn" data-filter="app">App</button>
+                <button type="button" class="filter-btn" data-filter="ai">AI</button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
@@ -501,7 +501,7 @@
                 <div data-aos="fade-right" class="h-full">
                     <div class="contact-info-container bg-gray-900 rounded-lg p-8 shadow-xl border-l-4 border-purple-500 h-full flex flex-col">
                         <h3 class="text-2xl font-bold mb-6 text-center text-gradient">Let's Connect</h3>
-                        
+
                         <div class="contact-info flex items-center mb-6 hover:transform hover:translate-x-2 transition-all duration-300">
                             <div class="contact-icon-wrapper mr-4 flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full">
                                 <i class="fas fa-envelope text-white text-lg"></i>
@@ -541,7 +541,7 @@
                                 <a href="https://www.instagram.com/beshwanth_katari/" target="_blank" class="text-gray-300 hover:text-purple-400 transition-colors">@beshwanth_katari</a>
                             </div>
                         </div>
-                        
+
                         <div class="mt-auto pt-6 border-t border-gray-700">
                             <p class="text-center text-gray-400">I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
                         </div>

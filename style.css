@@ -276,6 +276,16 @@ img {
   transition: width 1s ease-in-out;
 }
 
+/* Skill percentages */
+.skill-html { width: 90%; }
+.skill-css { width: 85%; }
+.skill-js { width: 80%; }
+.skill-react { width: 75%; }
+.skill-nodejs { width: 50%; }
+.skill-django { width: 75%; }
+.skill-python { width: 70%; }
+.skill-c { width: 65%; }
+
 /* Projects Section */
 .filter-btn {
   padding: 0.5rem 1.5rem;
