@@ -443,6 +443,119 @@ img {
 .form-input:focus {
   outline: none;
   border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Enhanced contact form mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-form {
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    border-radius: 0.5rem !important;
+  }
+  
+  .contact-form textarea {
+    min-height: 120px !important;
+    resize: vertical !important;
+    line-height: 1.5 !important;
+  }
+  
+  .contact-form label {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
+    font-weight: 500 !important;
+  }
+  
+  .contact-form button {
+    padding: 1rem !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+  }
+  
+  /* Contact info mobile improvements */
+  .contact-info-container {
+    padding: 1.5rem !important;
+    gap: 1.5rem !important;
+  }
+  
+  .contact-info {
+    margin-bottom: 1rem !important;
+    padding: 0.5rem 0 !important;
+    align-items: flex-start !important;
+  }
+  
+  .contact-info h4 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .contact-icon-wrapper {
+    flex-shrink: 0 !important;
+    margin-right: 1rem !important;
+  }
+  
+  /* Grid layout fixes for contact section */
+  .grid.grid-cols-1.md\\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  /* Ensure contact cards don't overflow */
+  .contact-info-container,
+  .bg-gray-900.rounded-lg {
+    overflow: hidden !important;
+    word-wrap: break-word !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Very small mobile devices contact form */
+@media (max-width: 360px) {
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px !important;
+    padding: 0.875rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .contact-form textarea {
+    min-height: 100px !important;
+  }
+  
+  .contact-form label {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .contact-form button {
+    padding: 0.875rem !important;
+    font-size: 0.95rem !important;
+  }
+  
+  .contact-info-container {
+    padding: 1rem !important;
+  }
+  
+  .contact-info h4 {
+    font-size: 1rem !important;
+  }
 }
 
 /* Scroll to top button */
@@ -1729,8 +1842,217 @@ img {
 }
 
 /* ================================
-   MOBILE RESPONSIVE FIXES
+   MOBILE ENHANCEMENTS FOR FABULOUS VIEW
    ================================ */
+
+/* Mobile-specific visual enhancements */
+@media (max-width: 768px) {
+  /* Enhanced hero section mobile */
+  #home {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 40%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    z-index: -1;
+  }
+  
+  .hero-image-container {
+    position: relative;
+    animation: floatMobile 4s ease-in-out infinite;
+  }
+  
+  /* Enhanced mobile cards */
+  .service-card,
+  .project-card,
+  .achievement-card {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  
+  .service-card:hover,
+  .project-card:hover,
+  .achievement-card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 15px 35px rgba(147, 51, 234, 0.2) !important;
+    border-color: rgba(147, 51, 234, 0.3) !important;
+  }
+  
+  /* Enhanced mobile buttons */
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    box-shadow: 0 6px 20px rgba(147, 51, 234, 0.4) !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease !important;
+  }
+  
+  .btn-primary:hover::before {
+    left: 100% !important;
+  }
+  
+  /* Enhanced mobile social icons */
+  .social-icon {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  
+  .social-icon:hover {
+    background: var(--primary-color) !important;
+    transform: translateY(-5px) rotate(5deg) !important;
+    box-shadow: 0 10px 25px rgba(147, 51, 234, 0.3) !important;
+  }
+  
+  /* Enhanced mobile navigation */
+  .mobile-nav-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin: 0.25rem 1rem !important;
+    border-radius: 12px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  
+  .mobile-nav-item:hover {
+    background: rgba(147, 51, 234, 0.2) !important;
+    transform: translateX(10px) !important;
+    border-color: rgba(147, 51, 234, 0.3) !important;
+  }
+  
+  /* Enhanced mobile sections */
+  section {
+    position: relative;
+  }
+  
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.02) 0%, rgba(99, 102, 241, 0.02) 100%);
+    z-index: -1;
+  }
+  
+  /* Enhanced mobile text gradients */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: gradientShift 3s ease-in-out infinite alternate !important;
+  }
+  
+  /* Enhanced mobile skill bars */
+  .skill-bar {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  
+  .skill-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 2s ease-in-out infinite !important;
+  }
+  
+  .skill-percentage {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    border-radius: 8px !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+}
+
+/* Mobile-specific animations */
+@keyframes floatMobile {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  100% {
+    filter: hue-rotate(10deg) brightness(1.1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Enhanced mobile scroll effects */
+@media (max-width: 768px) {
+  .liquid-glass-header.scrolled {
+    background: rgba(17, 24, 39, 0.95) !important;
+    backdrop-filter: blur(20px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+    border-bottom-color: rgba(147, 51, 234, 0.4) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* Mobile parallax effect */
+  .hero-image-container {
+    transform-style: preserve-3d;
+  }
+  
+  /* Enhanced mobile focus states */
+  .form-input:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.2) !important;
+    transform: scale(1.02) !important;
+  }
+  
+  /* Mobile loading animations */
+  .btn-primary:active {
+    transform: scale(0.98) !important;
+    transition: transform 0.1s ease !important;
+  }
+}
 
 /* Fix horizontal scroll issues */
 * {
@@ -1988,16 +2310,67 @@ img, video, iframe {
     margin: 2rem auto !important;
   }
   
-  /* Profile image forced circular */
+  /* Profile image forced circular - very small screens */
   .profile-image {
-    width: 220px !important;
-    height: 220px !important;
-    max-width: 220px !important;
-    max-height: 220px !important;
+    width: 200px !important;
+    height: 200px !important;
+    max-width: 200px !important;
+    max-height: 200px !important;
     border-radius: 50% !important;
     aspect-ratio: 1 !important;
     object-fit: cover !important;
-    border: 4px solid var(--primary-color) !important;
+    border: 3px solid var(--primary-color) !important;
+  }
+}
+
+/* Very small mobile devices (Redmi, small Android phones) */
+@media (max-width: 360px) {
+  .profile-image {
+    width: 180px !important;
+    height: 180px !important;
+    max-width: 180px !important;
+    max-height: 180px !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 !important;
+    object-fit: cover !important;
+    border: 3px solid var(--primary-color) !important;
+  }
+  
+  .hero-image-container {
+    max-width: 200px;
+  }
+  
+  .circle-1 {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .circle-2 {
+    width: 270px;
+    height: 270px;
+  }
+  
+  /* Enhanced contact form for very small screens */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px !important;
+    padding: 0.75rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .contact-form textarea {
+    min-height: 100px !important;
+  }
+  
+  .contact-form label {
+    font-size: 0.8rem !important;
+  }
+  
+  /* Better spacing for very small screens */
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 
